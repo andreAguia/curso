@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Formação Full Stack PHP Developer UpInside
  * @author Robson V. Leite <https://www.upinside.com.br>
@@ -30,38 +31,32 @@ ini_set('xdebug.overload_var_dump', 1);
  * [ interface ] Style, icon and logo
  */
 echo "<link rel='stylesheet' href='../../fullstackphp/fsphp.css'/>",
-"<link rel='icon' href='https://www.upinside.com.br/uploads/fsphpicon.png'/>",
-"<img class='logofsphp' src='https://www.upinside.com.br/uploads/fsphp.png'/>";
-
+ "<link rel='icon' href='https://www.upinside.com.br/uploads/fsphpicon.png'/>",
+ "<img class='logofsphp' src='https://www.upinside.com.br/uploads/fsphp.png'/>";
 
 /**
  * [ Title Function ] Cria o título do arquivo para o browser
  */
-function fullStackPHPClassName($className)
-{
+function fullStackPHPClassName($className) {
     echo "<title>{$className} | Full Stack PHP Developer</title>";
 }
-
 
 /**
  * [ Debug session ] Cria uma linha de sessão para exemplos
  * @var $color = red | green | yellow | blue
  * @var line = __LINE__
  */
-function fullStackPHPClassSession($session, $line, $color = null)
-{
+function fullStackPHPClassSession($session, $line, $color = null) {
     $line = (!empty($line) ? " <span class='line-session'>| Linha {$line}</span>" : "");
     $session = (!empty($session) ? "[ {$session}{$line} ]" : "");
     $color = (!empty($color) ? "var(--{$color})" : "");
     echo "<div class='code line' style='background-color: {$color}'>{$session}</div>";
 }
 
-
 /**
  * [ Default errors ] Função para exibir erros do PHP
  */
-function fullStackPHPErrorHandler($error, $message, $file, $line)
-{
+function fullStackPHPErrorHandler($error, $message, $file, $line) {
     $color = ($error == E_USER_ERROR ? "red" : "yellow");
     echo "<div class='trigger' style='border-color: var(--{$color}); color:var(--{$color});'>[ Linha {$line} ] {$message}<small>{$file}</small></div>";
 }

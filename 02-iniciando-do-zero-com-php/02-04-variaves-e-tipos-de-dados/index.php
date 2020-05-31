@@ -46,7 +46,7 @@ var_dump([
     "b" => $calcB
 ]);
 
-# As variávei tem o mesmo valor mas são armazenadas
+# As variáveis tem o mesmo valor mas são armazenadas
 #  em endereço de memória diferente
 $calcB = $calcA;
 
@@ -55,7 +55,7 @@ var_dump([
     "b" => $calcB
 ]);
 
-# As variávei tem o mesmo valor e se referenciam ao mesmo endereço de memória
+# As variáveis tem o mesmo valor e se referenciam ao mesmo endereço de memória
 #  em endereço de memória diferente
 $calcB = &$calcA;
 

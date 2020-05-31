@@ -7,6 +7,10 @@ fullStackPHPClassName("02.11 - Trabalhando com funções");
  */
 fullStackPHPClassSession("functions", __LINE__);
 
+require __DIR__."/functions.php";
+
+var_dump(functionName("AnaVitoria", "Nina Fernandes", "Tiago Iorc"));
+
 
 /*
  * [ global access ] global $var

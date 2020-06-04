@@ -82,10 +82,10 @@ print_r($array);
 echo "<pre>", print_r($array), "</pre>";
 
 # Repare que é exibido o número 1 depois do array. 
-# É um TRUE que o print_r retorna para informar que consegui exibir o print_r. 
+# É um true que o print_r retorna para informar que consegui exibir o print_r. 
 # (ESSA PARTE NÃO ENTENDI)
-# Para tirar esse TRUE informo um segundo parâmetro no print_r
-echo "<pre>", print_r($array, TRUE), "</pre>";
+# Para tirar esse true informo um segundo parâmetro no print_r
+echo "<pre>", print_r($array, true), "</pre>";
 
 /**
  * [ printf ] https://php.net/manual/pt_BR/function.printf.php
@@ -138,13 +138,13 @@ echo vsprintf($company, $array);
 fullStackPHPClassSession("var_dump", __LINE__);
 
 # è usado para um debug maior das váriáveis a serem exibidas.
-# Algo semelhante ao echo "<pre>", print_r($array, TRUE), "</pre>";
+# Algo semelhante ao echo "<pre>", print_r($array, true), "</pre>";
 # Só que mais completo
 
 var_dump($array);
 
 # Repare a diferença
-echo "<pre>", print_r($array, TRUE), "</pre>";
+echo "<pre>", print_r($array, true), "</pre>";
 
 # Vc pode debugar várias variávei de uma só vez
 var_dump(

@@ -8,7 +8,7 @@ fullStackPHPClassName("03.02 - Funções para strings");
  */
 fullStackPHPClassSession("strings e multibyte", __LINE__);
 
-$string = "o último show do Queen foi incrível!";
+$string = "o último show do Queen foi incrível! foi fantástico !";
 
 var_dump([
     "string"        => $string,
@@ -40,13 +40,14 @@ var_dump([
 fullStackPHPClassSession("substituição", __LINE__);
 
 var_dump([
-    "mb_strlen"       => mb_strlen($string),
-    "mb_strpos"       => mb_strpos($string, "Queen"),
-    "mb_strrpos"      => mb_strrpos($string, "foi"),
-    "mb_substr"       => mb_substr($string, 20, 12),
-    "mb_strstr true"  => mb_strstr($string, "foi"),
-    "mb_strstr false" => mb_strstr($string, "foi", true),
-    "mb_strrchr"      => mb_strstr($string, "foi", true),
+    "mb_strlen"        => mb_strlen($string),
+    "mb_strpos"        => mb_strpos($string, "Queen"),
+    "mb_strrpos"       => mb_strrpos($string, "foi"),
+    "mb_substr"        => mb_substr($string, 20, 12),
+    "mb_strstr false"  => mb_strstr($string, "foi"),
+    "mb_strstr true"   => mb_strstr($string, "foi", true),
+    "mb_strrchr true"  => mb_strrchr($string, "foi", true),
+    "mb_strrchr false" => mb_strrchr($string, "foi"),
 ]);
 
 echo "<p>", $string, "<p>";

@@ -27,7 +27,7 @@ var_dump($objProfile);
 echo "<p>O telefone do {$arrProfile["nome"]} é {$arrProfile["telefone"]}";
 echo "<p>O telefone do {$objProfile->nome} é {$objProfile->telefone}";
 
-echo "<p>Retirando um atributo de um objeto</p>";
+echo "<p>Apagando um atributo de um objeto</p>";
 $ceo = $objProfile;
 unset($ceo->endereco);
 

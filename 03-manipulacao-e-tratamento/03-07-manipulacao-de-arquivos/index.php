@@ -43,8 +43,25 @@ $open = fopen($file,"r");   // Abre o arquivo no modo read
 while (!feof($open)) {
     echo "<p>" . fgets($open) . "</p>";
 }
+fclose($open);
 
 /*
  * [ get, put content ] file_get_contents | file_put_contents
  */
 fullStackPHPClassSession("get, put content", __LINE__);
+
+$getContent = __DIR__."/teste2.txt";
+
+#file_get_contents($getContent);
+
+if (file_exists($getContent) && is_file($getContent)) {
+    echo file_get_contents($getContent);
+}else{
+    $data = "<article><h1>André Luis</h1><p>Administrador</p></article>";
+    file_put_contents($getContent, $data);
+    echo file_get_contents($getContent);
+}
+
+# Apagando arquivos
+unlink($getContent);
+unlink($file);

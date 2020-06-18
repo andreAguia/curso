@@ -35,6 +35,7 @@ var_dump(
     $newTimeZone,
     $newDateTime,
     $dateNow,
+    get_class_methods($newTimeZone),
 );
 
 echo "<p>Usando o Método diff</p>";
@@ -65,6 +66,7 @@ $dateInterval = new DateInterval("P10Y2MT10M");
 
 var_dump(
     $dateInterval,
+    get_class_methods($dateInterval),
 );
 
 echo "<p>Adicionando 10 anos e 2 meses a data atual</p>";

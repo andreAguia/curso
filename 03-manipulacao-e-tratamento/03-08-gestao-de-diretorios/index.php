@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/../../fullstackphp/fsphp.php';
 fullStackPHPClassName("03.08 - Gestão de diretórios");
 
@@ -31,18 +32,18 @@ if (!file_exists($folder) || !is_dir($folder)) {
 }
 
 var_dump(
-    pathinfo($file),    // Exibe os dados do nome arquivo: dirname, basename, extension e filename
-    scandir($folder),   // Exibe o que está no diretório $folder
-    scandir(__DIR__),   // Exibe o que está no diretório raiz
+        pathinfo($file), // Exibe os dados do nome arquivo: dirname, basename, extension e filename
+                 scandir($folder), // Exibe o que está no diretório $folder
+                         scandir(__DIR__), // Exibe o que está no diretório raiz
 );
 
 # Exibindo os arquivos de um diretório retirando os atalhos . e ..
-$dirFiles = array_diff(scandir($folder),[".",".."]);    // retira do scandir os atalhos . e ..
+$dirFiles = array_diff(scandir($folder), [".", ".."]);    // retira do scandir os atalhos . e ..
 $dirCount = count($dirFiles);                           // conta os arquivos
 
 var_dump(
-    $dirFiles,
-    $dirCount,
+        $dirFiles,
+        $dirCount,
 );
 
 if (!file_exists($file) || !is_file($file)) {
@@ -54,7 +55,7 @@ if (!file_exists($file) || !is_file($file)) {
     //    filemtime(__DIR__."/upload/file.txt"),
     //);
     //rename(__DIR__."/upload/file.txt",__DIR__."/upload/".time().".".pathinfo($file)["extension"]);
-    rename($file,__DIR__."/upload/".time().".".pathinfo($file)["extension"]);
+    rename($file, __DIR__ . "/upload/" . time() . "." . pathinfo($file)["extension"]);
 }
 
 /*
@@ -64,9 +65,22 @@ fullStackPHPClassSession("remover e deletar", __LINE__);
 
 $folder = __DIR__ . "/remove";
 
-if (!file_exists($folder) || !is_dir($folder)) {
-    mkdir($folder, 0755);
-}else{
-    rmdir(__DIR__."/remove");
+if (file_exists($folder) AND is_dir($folder)) {
+    # Pega os arquivos
+    $dirFiles = array_diff(scandir($folder), [".", ".."]);
+
+    # Pega a quantidade de arquivos
+    $dirCount = count($dirFiles);
+
+    if ($dirCount >= 1) {
+        foreach($dirFiles as $fileItem){
+            $fileItem = __DIR__."/remove/{$fileItem}";
+            if (file_exists($fileItem) AND is_file($fileItem)) {
+                unlink($fileItem);
+            }
+        }
+    } else {
+        rmdir($folder);
+    }
 }
 

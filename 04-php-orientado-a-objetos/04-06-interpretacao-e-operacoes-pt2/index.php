@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../../fullstackphp/fsphp.php';
+require __SSDIR__ . '/../../fullstackphp/fsphp.php';
 fullStackPHPClassName("04.06 - Interpretação e operações pt2");
 
 require __DIR__ . "/source/autoload.php";
@@ -11,7 +11,15 @@ require __DIR__ . "/source/autoload.php";
  * inacessível = propridade é privada ou não existe
  */
 fullStackPHPClassSession("__set", __LINE__);
+# O __set é disparado sempre quando tentamos acessar um método
+# que não existe ou que não e público
 
+$fsphp = new \Source\Interpretation\Product();
+$fsphp->handler("Full Stack PHP", 1997);
+$fsphp->name = "FSPHP";
+$fsphp->title = "FSPHP";
+$fsphp->value = 1997;
+$fsphp->price = 1997;
 
 /*
  * [ get ] Executado automaticamente quando se tenta obter uma propriedade inacessível

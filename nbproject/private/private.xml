@@ -2,6 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/var/www/html/curso/04-php-orientado-a-objetos/04-09-membros-de-uma-classe/source/Members/Trigger.php</file>
+            <file>file:/var/www/html/curso/04-php-orientado-a-objetos/04-09-membros-de-uma-classe/source/Members/Config.php</file>
+            <file>file:/var/www/html/curso/04-php-orientado-a-objetos/04-09-membros-de-uma-classe/index.php</file>
+        </group>
     </open-files>
 </project-private>

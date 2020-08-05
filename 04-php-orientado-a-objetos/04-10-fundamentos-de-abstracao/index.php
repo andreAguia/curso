@@ -1,4 +1,5 @@
 <?php
+
 require __DIR__ . '/../../fullstackphp/fsphp.php';
 fullStackPHPClassName("04.10 - Fundamentos da abstração");
 
@@ -10,6 +11,22 @@ require __DIR__ . "/source/autoload.php";
  */
 fullStackPHPClassSession("superclass", __LINE__);
 
+$client = new Source\App\User(
+        "André",
+        "Águia"
+);
+
+$account = new \Source\Bank\Account(
+        "123",
+        "1456",
+        $client,
+        1000
+);
+
+var_dump(
+        $client,
+        $account
+);
 
 /*
  * [ especialização ] É uma classe filha que implementa a superclasse e se especializa

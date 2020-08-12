@@ -23,6 +23,7 @@ $user->fisrtName = "André";
 $user->lastName = "Águia";
 $user->email = "alataguia";
 
+
 var_dump($user);
 
 echo "<p>O email de {$user->fisrtName} {$user->lastName} é {$user->email}.</p>";

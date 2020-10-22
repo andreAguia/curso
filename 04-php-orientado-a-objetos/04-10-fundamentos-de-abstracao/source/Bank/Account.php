@@ -3,13 +3,12 @@
 namespace Source\Bank;
 
 use Source\App\User;
-
 use Source\App\Trigger;
 
 /*
  * Classe abstrata.
  * Toda classe tem como padrão ser uma classe concreta.
- * Classes abstratas servem somente de modelo apra as classes filhas
+ * Classes abstratas servem somente de modelo para as classes filhas
  * Tipo um tempĺate de classe
  */
 
@@ -32,7 +31,7 @@ abstract class Account
         $this->balance = $balance;
     }
 
-    public function extract($param)
+    public function extract()
     {
         $extract = ($this->balance >= 1 ? Trigger::ACCEPT : Trigger::ERROR);
         Trigger::show("EXTRATO: Saldo atual: {$this->toBrl($this->balance)}", $extract);
